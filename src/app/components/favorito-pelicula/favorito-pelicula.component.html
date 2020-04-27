@@ -1,0 +1,11 @@
+
+
+
+<div style="width: 200px;" *ngIf="paliFav" class="card">
+    <img [src]="paliFav.imagen" class="card-img-top" alt="...">
+    <div class="card-body">
+        <button *ngIf="!paliFav.favorita" (click)="anadirAfavoritos()"  class="btn btn-warning" >Añadir a Favoritos</button>
+        <button *ngIf="paliFav.favorita" class="btn btn-success" >Agregado a favoritos</button>
+        
+    </div>
+  </div>

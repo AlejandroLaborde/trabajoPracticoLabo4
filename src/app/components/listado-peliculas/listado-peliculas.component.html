@@ -1,0 +1,48 @@
+<div class="album py-5">
+    <div class="container">
+      <div class="row">
+
+        <div class="col-md-4" *ngFor="let pelicula of peliculas" >
+            <div class="card mb-4 shadow-sm">
+              <img  height="300px" [src]="pelicula.imagen" alt="">
+              <div class="card-body">
+                <p class="card-text">{{pelicula.titulo}}</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <a type="button"  (click)="verDetalle( pelicula )" class="btn btn-sm btn-outline-secondary">Ver detalle</a>
+                  </div>
+                  <small class="text-muted">{{pelicula.fecha}}</small>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div *ngIf="peliculas.length == 0">
+            <div class="spinner-border text-primary" role="status">
+              <span class="sr-only">Cargando...</span>
+            </div>
+            <div class="spinner-border text-secondary" role="status">
+              <span class="sr-only">Cargando...</span>
+            </div>
+            <div class="spinner-border text-success" role="status">
+              <span class="sr-only">Cargando...</span>
+            </div>
+            <div class="spinner-border text-danger" role="status">
+              <span class="sr-only">Cargando...</span>
+            </div>
+            <div class="spinner-border text-warning" role="status">
+              <span class="sr-only">Cargando...</span>
+            </div>
+            <div class="spinner-border text-info" role="status">
+              <span class="sr-only">Cargando...</span>
+            </div>
+            <div class="spinner-border text-light" role="status">
+              <span class="sr-only">Cargando...</span>
+            </div>
+            <div class="spinner-border text-dark" role="status">
+              <span class="sr-only">Cargando...</span>
+            </div>
+          </div>
+          
+      </div>
+    </div>
+</div>

@@ -1,0 +1,9 @@
+<nav class="navbar navbar-dark bg-dark">
+  <a class="navbar-brand">Peliculas</a>
+  <form class="form-inline">
+    <input  [(ngModel)]="buscar"  (keyup) ="buscarPeli()" [ngModelOptions]="{standalone: true}" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+
+    <!-- <button class="btn btn-outline-success my-2 my-sm-0" (click)="buscarPeli()" type="button">Buscar</button> -->
+    
+  </form>
+</nav>
